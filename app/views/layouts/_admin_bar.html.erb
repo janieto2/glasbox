@@ -1,0 +1,26 @@
+<!-- Start Admin Bar -->
+<% if current_user %>
+  <div class="admin_bar">
+    <div class ="container">
+      <div class="row">
+        <div class="span12"> 
+          <div class="user_actions"> 
+            <div class="btn-group">
+              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                Hello <%= current_user.full_name %>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Edit Profile", :logout, :tabindex => "-1" %></li>
+                <li><%= link_to "Another Link", :logout, :tabindex => "-1" %></li>
+                <li class="divider"></li>
+                <li><%= link_to "Logout", :logout, :tabindex => "-1" %></li>
+              </ul>
+            </div>
+          </div><!-- end user_actions -->
+
+        </div> <!-- en span12 -->
+      </div> <!-- end container -->
+    </div> <!-- end container -->
+  </div><!-- end admin_bar -->
+<% end %><!-- End Admin Bar -->

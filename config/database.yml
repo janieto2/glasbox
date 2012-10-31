@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  database: glasbox_development
+  username: <%= ENV["Pepe"] %>
+  password:
+  allow_concurrency: true
+  pool: 5
+  min_messages: warning
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: glasbox_test
+  username: <%= ENV["Pepe"] %>
+  password:
+  allow_concurrency: true
+  pool: 5
+  min_messages: warning
