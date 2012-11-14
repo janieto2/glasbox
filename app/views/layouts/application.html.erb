@@ -29,19 +29,40 @@
             <div class="row">
 
               <div class="span12">
-                  :O
+                  <!-- Title Goes here -->
+                  <div class="logo"><%= link_to image_tag('logo.png'), :root %></div>
+
+                  <!-- Navigation -->
+
+                  <ul class="navigationm">
+                    <li class="navli">Home</li>
+                    <li class="navli">About</li>
+                    <li class="navli">Membership</li>
+                    <li class="navli">Events</li>
+                    <li class="navli">Contact</li>
+                  </ul>
 
               </div><!-- EDN SPAN12 -->
             </div><!--  END ROW -->
           </div><!-- END Containter -->
-    </header>
+             
+         
 
+    </header>
+ 
   <div class="container">
     <div class="row">
+
+        <div class="span8">
+        </div>
+        <div class="span4">
+          <div class="social-media">
+            You can follow us on the social networks
+          </div>
+        </div>
+
       <div class="span12 main_content">
         
-            <p>This is a test <p>
-              <div class="something">this is a test </div>
               
         <%= yield %>
         <%#= render '' %>
