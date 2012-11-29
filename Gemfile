@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails'
 gem 'authlogic'
+gem "therubyracer"
+gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem 'paperclip', "~> 3.0"
 gem 'redcarpet'
