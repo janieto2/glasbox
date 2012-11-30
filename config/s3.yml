@@ -1,12 +1,12 @@
 development:
-  bucket: glasbox
-  access_key_id: AKIAJFYB4XR62T3VETGA
-  secret_access_key: ks6/Zp7tqVFZYwJ3aWAsDsK+tXmmVsMsr9SjfhmX
+  bucket: glasbox
+  access_key_id: AKIAJFYB4XR62T3VETGA
+  secret_access_key: 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
 test:
-  bucket: glasbox
-  access_key_id: AKIAJFYB4XR62T3VETGA
-  secret_access_key: ks6/Zp7tqVFZYwJ3aWAsDsK+tXmmVsMsr9SjfhmX
+  bucket: glasbox
+  access_key_id: AKIAJFYB4XR62T3VETGA
+  secret_access_key: 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
 production:
-  bucket: glasbox
-  access_key_id: AKIAJFYB4XR62T3VETGA
-  secret_access_key: ks6/Zp7tqVFZYwJ3aWAsDsK+tXmmVsMsr9SjfhmX
+  bucket: glasbox
+  access_key_id: AKIAJFYB4XR62T3VETGA
+  secret_access_key: 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
