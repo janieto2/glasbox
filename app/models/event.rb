@@ -3,8 +3,7 @@ class Event < ActiveRecord::Base
 
   #Paperclip
   has_attached_file :main_image, 
-	:styles => { :thumb => "100X100#", :small => "266X148#", 
-	:large => "940X345#", :regular => "442X278#"}, 
+	:styles => { :smaill => "400x180#", :regular => "880x330#" }, 
 	:preserve_files => true,
 	:storage => :s3,
 	:s3_credentials => "#{::Rails.root.to_s}/config/s3.yml"

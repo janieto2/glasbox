@@ -1,1 +1,5 @@
-List events here
+<% @events.each do |event| %>
+  <h4 class="title_index_event"> <%= event.title %> </h4>
+  <%= link_to image_tag(event.main_image(:small)), event, :class => "image_tag_css" %>
+  <p class="description_index_event"><%= event.description %></p>
+<% end %>

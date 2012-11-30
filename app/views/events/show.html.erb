@@ -8,8 +8,9 @@
   <dd><%= @event.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @event.description %></dd>
+  <dt><strong>image:</strong></dt>
+  <dd> <%= image_tag @event.main_image(:small)  %> </dd>
 </dl>
-
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               events_path, :class => 'btn'  %>

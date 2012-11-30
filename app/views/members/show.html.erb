@@ -8,6 +8,8 @@
   <dd><%= @member.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
   <dd><%= @member.description %></dd>
+  <dt><strong>Image Profile:</strong><dt>
+  <dd> <%= image_tag @member.main_image(:small) %>
 </dl>
 
 <div class="form-actions">
