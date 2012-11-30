@@ -39,7 +39,7 @@
 		<h2 class="comment_section">Welcome to Glassbox</h2>
 			<p class="comment_content"> 
 Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus libero, aliquam ornare elementum at, facilisis ultrices justo. Integer sed felis magna, vitae scelerisque magna. Curabitur quis vestibulum nibh. Nullam accumsan ante sit amet tortor molestie nec auctor orci sodales. Mauris dignissim, enim id hendrerit feugiat, ante metus ullamcorper sem, in lacinia quam mauris hendrerit tellus. Quisque porttitor ligula ut libero varius ac ultricies dolor laoreet. Etiam diam nunc, porttitor non mattis sit amet, semper eget eros.</p>
-			<a href="#" class="button_rm">Read More</a>
+			<%= link_to 'Read More', '#',  :class => "btn btn-primary right pull-right"%>
 		</div> <!-- Cooments_left END -->
 	</div>	
 	<!-- LEFT COMMENTS END -->
@@ -48,10 +48,32 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 
 <div class="row-fluid body_content">
 	<div class="span7">
-		<h4>Lorem Ipsum</h4>
+		<h4>What is Glasbox?</h4>
 		<p class="m_text">This is plain text that will be displaying on this website | This is plain text that will be displaying on this website</p>
-		<span class="mini_img"><%= image_tag('miniimg.png') %></span><span class="text_img">Lorem Ipsum</span>
-	</div>	
+
+		<div class="row-fluid">
+			<div class="span6">
+				<i class="icon icon-briefcase"> </i> <span class="text_img">Lorem Ipsum</span>
+				<p>
+				Nam at sem in enim elementum pulvinar at eu lectus. Nulla facilisi. Nulla sem urna, imperdiet vitae rutrum vitae, egestas ut sapien. Mauris ac hendrerit ipsum.
+				</p>
+			</div>
+
+			<div class="span6"> 
+				<i class="icon icon-pencil"> </i> <span class="text_img">Lorem Ipsum</span>
+				<p>
+				Nam at sem in enim elementum pulvinar at eu lectus. Nulla facilisi. Nulla sem urna, imperdiet vitae rutrum vitae, egestas ut sapien. Mauris ac hendrerit ipsum.
+				</p>
+
+				<ul>
+					<li> 
+			</div>
+		</div><!-- end row-fluid -->
+	</div><!-- end span7 -->
+
+	<div class="span5">
+		<h4> Members </h4>
+	</div>
 </div>
 
 
