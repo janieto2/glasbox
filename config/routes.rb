@@ -1,4 +1,12 @@
 Glasbox::Application.routes.draw do
+  get "admin/members"
+
+  get "admin/events"
+
+  resources :events
+
+  resources :members
+
   get "pages/home"
 
   get "pages/about"

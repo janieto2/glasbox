@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   #Attributes
   attr_accessible :email, :first_name, :last_name, 
-  				  :password, :password_confirmation
+  				  :password, :password_confirmation, :is_admin
 
 	#Authlogic
 	acts_as_authentic do |c|
