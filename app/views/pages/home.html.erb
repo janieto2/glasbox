@@ -2,7 +2,7 @@
 	<div class="span7">
 		<!-- CARRUSSEL -->
 			
-			<div id="myCarousel" class="carousel slide">
+			<div id="main_slider" class="carousel slide">
 			  <!-- Carousel items -->
 			  <div class="carousel-inner">
 			    <div class="active item"> <%=image_tag("car1.png") %>
@@ -27,8 +27,8 @@
 
 			  </div>
 			  <!-- Carousel nav -->
-			  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			  <a class="carousel-control left" href="#main_slider" data-slide="prev">&lsaquo;</a>
+			  <a class="carousel-control right" href="#main_slider" data-slide="next">&rsaquo;</a>
 			</div>
 
 	</div>
@@ -47,7 +47,7 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 </div>
 
 <div class="row-fluid body_content">
-	<div class="span7">
+	<div class="span7 home_about_content">
 		<h4>What is Glasbox?</h4>
 		<p class="m_text">This is plain text that will be displaying on this website | This is plain text that will be displaying on this website</p>
 
@@ -66,13 +66,18 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 				</p>
 
 				<ul>
-					<li> 
+					<li><i class="icon icon-ok"> </i> </li> 
+					<li><i class="icon icon-ok"> </i> </li>
+					<li><i class="icon icon-ok"> </i> </li>
+				</ul>
 			</div>
 		</div><!-- end row-fluid -->
 	</div><!-- end span7 -->
 
-	<div class="span5">
+	<div class="span5 home_members_content">
 		<h4> Members </h4>
+		<%= image_tag 'samle_image.png' %>
+
 	</div>
 </div>
 
