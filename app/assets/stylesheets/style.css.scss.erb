@@ -34,6 +34,17 @@ img {
 
 ul{list-style:none;}
 
+/*** Admin Pages ***/
+.admin [class^="icon-"], [class*="icon-"]{
+	padding-top: 5px;
+	padding-right: 10px;
+}
+
+.admin .well{
+	h4{text-align: center;}
+	p{min-height: 120px;}
+}
+
 .sidebar{
 	h3{
 		font-size: 14px;
@@ -95,7 +106,19 @@ p{
 .admin_bar{
 	width: 100%;
 	height: 30px;
-	background-color: #dadada;
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #363636;
+	background-image: -moz-linear-gradient(top, #444, #222);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#444), to(#222));
+	background-image: -webkit-linear-gradient(top, #444, #222);
+	background-image: -o-linear-gradient(top, #444, #222);
+	background-image: linear-gradient(to bottom, #444, #222);
+	background-repeat: repeat-x;
+	border-color: #222 #222 black;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 
 	.user_actions{
 		float: right;
@@ -156,9 +179,9 @@ p{
 		background-position: 0 0 !important;
 	}
 
-	#twitter a{background: url(<%= asset_path 'twitter.png' %>);}
+	#twitter a{background: url(image_path('smicons-twitter.png'));}
 
-	#facebook a{background: url(<%= asset_path 'facebook.png' %>);}
+	#facebook a{background:  url(image_path('smicons-facebook.png'));}
 
 }
 

@@ -20,6 +20,17 @@ Glasbox::Application.routes.draw do
   match 'about' => "pages#about", :as => :about
   match 'membership' => "pages#membership", :as => :membership
 
+  #Contact
+  match 'contact' => 'contact#new', :as => 'contact', :via => :get
+  match 'contact' => 'contact#create', :as => 'contact', :via => :post
+
+  #Admin
+  #Admin
+  get "admin/events", :as => :events_admin_path
+  get "admin/members", :as => :member_admin_path
+  get "admin/dashboard", :as => :dashboard
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,6 +1,7 @@
 Glasbox::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -64,4 +65,19 @@ Glasbox::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  #Email
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "yourdomain.dev",
+    :user_name            => "from@yourdomain.dev",
+    :password             => "Super-Secure-Password",
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
+
+  config.action_mailer.default_url_options = {
+    :host => "yourdomain.dev"
+  }
 end
