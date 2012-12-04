@@ -22,7 +22,7 @@
 			    	<h4>OMG TEST 3</h4>
 			    	<p>This is only a test :D</p>
 			    </div>
-			    </div> <!-- UTEM 3 -->
+			    </div> <!-- Item 3 -->
 
 
 			  </div>
@@ -51,6 +51,8 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 		<h4>What is Glasbox?</h4>
 		<p class="m_text">This is plain text that will be displaying on this website | This is plain text that will be displaying on this website</p>
 
+		<iframe src="http://player.vimeo.com/video/54434468?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="100%" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
 		<div class="row-fluid">
 			<div class="span6">
 				<i class="icon icon-briefcase"> </i> <span class="text_img">Lorem Ipsum</span>
@@ -71,47 +73,51 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 					<li><i class="icon icon-ok"> </i> </li>
 				</ul>
 			</div>
+
+
 		</div><!-- end row-fluid -->
 	</div><!-- end span7 -->
 
 	<div class="span5 home_members_content">
 		<h4> Members </h4>
-		<%= image_tag 'samle_image.png' %>
 
-	</div>
+		<div id="members_slider" class="carousel slide">
+		  <!-- Carousel items -->
+		  <div class="carousel-inner">
+		    <div class="active item"> <%=image_tag("car1.png") %>
+		    <div class="carousel-caption">
+		    	<h4>OMG TEST</h4>
+		    	<p>This is only a test :D</p>
+		    </div>
+		  	</div> <!-- ITEM 1 -->
+		    <div class="item"><%=image_tag("car1.png") %>
+		    	 <div class="carousel-caption">
+		    	<h4>OMG TEST 2</h4>
+		    	<p>This is only a test :D</p>
+		    </div>
+		    </div> <!-- ITEM 2 -->
+		    <div class="item"><%=image_tag("car1.png") %>
+		    	 <div class="carousel-caption">
+		    	<h4>OMG TEST 3</h4>
+		    	<p>This is only a test :D</p>
+		    </div>
+		    </div> <!-- Item 3 -->
+
+
+		  </div>
+		  <!-- Carousel nav -->
+		  <a class="carousel-control left" href="#members_slider" data-slide="prev">&lsaquo;</a>
+		  <a class="carousel-control right" href="#members_slider" data-slide="next">&rsaquo;</a>
+		</div><!-- end members_slider -->
+
+		<div class="members_explantion">
+			<p>
+			An explanation of Glasbox members donec interdum massa eu est viverra cursus sed eu velit. Quisque ut nibh ipsum, vitae aliquam lorem. Aliquam et venenatis odio. Cras enim odio, varius sit amet tristique ut, tempor vitae ante. Mauris rutrum hendrerit porta. 
+		</div>
+	</div><!-- end home_members_content -->
 </div>
 
 
 <script type="text/javascript">
 	$('.carousel').carousel()
 </script>
-
-
-
-<!-- <div id="myCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="item">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                  <div class="item active">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
-                    <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                    </div>
-                  </div>
-                </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-              </div> -->
