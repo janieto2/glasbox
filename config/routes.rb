@@ -1,16 +1,12 @@
 Glasbox::Application.routes.draw do
   get "admin/members"
-
   get "admin/events"
+  get "pages/home"
+  get "pages/about"
+  get "pages/membership"
 
   resources :events
-
   resources :members
-
-  get "pages/home"
-
-  get "pages/about"
-
   resources :users
   resources :user_sessions
 
@@ -19,6 +15,10 @@ Glasbox::Application.routes.draw do
   match 'login' => "user_sessions#new", :as => :login
   match 'logout' => "user_sessions#destroy", :as =>:logout
   match 'signup' => "users#new", :as => :signup
+
+  #Pages
+  match 'about' => "pages#about", :as => :about
+  match 'membership' => "pages#membership", :as => :membership
 
 
   # The priority is based upon order of creation:

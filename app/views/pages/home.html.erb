@@ -38,8 +38,9 @@
 		
 		<h2 class="comment_section">Welcome to Glassbox</h2>
 			<p class="comment_content"> 
-Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus libero, aliquam ornare elementum at, facilisis ultrices justo. Integer sed felis magna, vitae scelerisque magna. Curabitur quis vestibulum nibh. Nullam accumsan ante sit amet tortor molestie nec auctor orci sodales. Mauris dignissim, enim id hendrerit feugiat, ante metus ullamcorper sem, in lacinia quam mauris hendrerit tellus. Quisque porttitor ligula ut libero varius ac ultricies dolor laoreet. Etiam diam nunc, porttitor non mattis sit amet, semper eget eros.</p>
-			<%= link_to 'Read More', '#',  :class => "btn btn-primary right pull-right"%>
+				The name Glasbox implies transparency, which is an important quality in communities in general and business specifically. It also, superficially, describes our present physical space with all of the windows, but, more importantly, it opposes the idea of a "black box,"which, in some circles, denotes an inscrutable subroutine, or a part of a system which is excessively esoteric. We are a community of Creatives who welcome...
+			</p>
+			<%= link_to 'Read More', :about,  :class => "btn btn-primary right pull-right"%>
 		</div> <!-- Cooments_left END -->
 	</div>	
 	<!-- LEFT COMMENTS END -->
@@ -48,8 +49,8 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 
 <div class="row-fluid body_content">
 	<div class="span7 home_about_content">
-		<h4>What is Glasbox?</h4>
-		<p class="m_text">This is plain text that will be displaying on this website | This is plain text that will be displaying on this website</p>
+		<h4 class="subtitle">What is Glasbox?</h4>
+		<p class="m_text"><b>Glasbox</b> is a facility that manufactures creative opportunities.</p>
 
 		<iframe src="http://player.vimeo.com/video/54434468?title=0&amp;byline=0&amp;portrait=0&amp;badge=0" width="100%" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
@@ -68,9 +69,9 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 				</p>
 
 				<ul>
-					<li><i class="icon icon-ok"> </i> </li> 
-					<li><i class="icon icon-ok"> </i> </li>
-					<li><i class="icon icon-ok"> </i> </li>
+					<li><i class="icon icon-ok"> </i> Check 1</li> 
+					<li><i class="icon icon-ok"> </i> Check 2</li>
+					<li><i class="icon icon-ok"> </i> Check 3</li>
 				</ul>
 			</div>
 
@@ -79,31 +80,17 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 	</div><!-- end span7 -->
 
 	<div class="span5 home_members_content">
-		<h4> Members </h4>
+		<h4 class="subtitle"> Members </h4>
 
 		<div id="members_slider" class="carousel slide">
 		  <!-- Carousel items -->
 		  <div class="carousel-inner">
-		    <div class="active item"> <%=image_tag("car1.png") %>
-		    <div class="carousel-caption">
-		    	<h4>OMG TEST</h4>
-		    	<p>This is only a test :D</p>
-		    </div>
-		  	</div> <!-- ITEM 1 -->
-		    <div class="item"><%=image_tag("car1.png") %>
-		    	 <div class="carousel-caption">
-		    	<h4>OMG TEST 2</h4>
-		    	<p>This is only a test :D</p>
-		    </div>
-		    </div> <!-- ITEM 2 -->
-		    <div class="item"><%=image_tag("car1.png") %>
-		    	 <div class="carousel-caption">
-		    	<h4>OMG TEST 3</h4>
-		    	<p>This is only a test :D</p>
-		    </div>
-		    </div> <!-- Item 3 -->
-
-
+		  	<% first_member = @members.first %>
+		  	<% @members.each do |member| %>
+			  	<div class="<% if member == first_member %> active <% end %> item">
+			  		<%= image_tag(member.main_image(:regular))  %>			  	
+			  	</div>
+			 <% end %>
 		  </div>
 		  <!-- Carousel nav -->
 		  <a class="carousel-control left" href="#members_slider" data-slide="prev">&lsaquo;</a>
@@ -112,7 +99,7 @@ Nulla ultricies eros sollicitudin est dignissim sollicitudin. Phasellus lacus li
 
 		<div class="members_explantion">
 			<p>
-			An explanation of Glasbox members donec interdum massa eu est viverra cursus sed eu velit. Quisque ut nibh ipsum, vitae aliquam lorem. Aliquam et venenatis odio. Cras enim odio, varius sit amet tristique ut, tempor vitae ante. Mauris rutrum hendrerit porta. 
+			First and foremost, GLASBOX is a great place to work and be creative. Membership includes free access to the events we host: cultural events, art openings, theatrical events, classes, workshops, and seminars. We are putting the finishing touches on our Conference/Classroom and the first of several CoWorking areas. We stock snacks and drinks including (great coffee) which are available free of charge to members and their guests. There is even a gym if you want a break or need to blow off some steam. We are constantly looking for ways to enhance the creative process, through networking and collaborative opportunities.
 		</div>
 	</div><!-- end home_members_content -->
 </div>

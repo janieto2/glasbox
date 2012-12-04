@@ -24,58 +24,60 @@
   <%= render 'layouts/admin_bar' %>
   <%= render 'layouts/alerts' %>
 
-    <header class="mainh"> 
-          <div class="container">
-            <div class="row">
+  <header class="mainh"> 
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span12">
+          <!-- Title Goes here -->
+          <div class="logo"><%= link_to image_tag('logo.png'), :root %></div>
 
-              <div class="span12">
-                  <!-- Title Goes here -->
-                  <div class="logo"><%= link_to image_tag('logo.png'), :root %></div>
-
-                  <!-- Navigation -->
-
-                  <ul class="navigationm">
-                    <li class="navli"> <%= link_to 'Home' %></li>
-                    <li class="navli"> <%= link_to 'About' %></li>
-                    <li class="navli"> <%= link_to 'Membership' %></li>
-                    <li class="navli"> <%= link_to 'Events' %></li>
-                    <li class="navli"> <%= link_to 'Contact' %></li>
-                  </ul>
-
-              </div><!-- EDN SPAN12 -->
-            </div><!--  END ROW -->
-          </div><!-- END Containter -->
-             
-         
-
-    </header>
+          <!-- Navigation -->
+          <ul class="navigationm">
+            <li class="navli"> <%= link_to 'Home', :root %></li>
+            <li class="navli"> <%= link_to 'About', :about %></li>
+            <li class="navli"> <%= link_to 'Members', members_path %></li>
+            <li class="navli"> <%= link_to 'Membership', :membership %></li>
+            <li class="navli"> <%= link_to 'Events', events_path %></li>
+            <li class="navli"> <%= link_to 'Contact' %></li>
+          </ul>
+        </div><!-- EDN SPAN12 -->
+      </div><!--  END ROW -->
+    </div><!-- END Containter -->
+  </header>
  
   <div class="container">
-    <div class="row">
-
-        <div class="span6">
-        </div>
-        <div class="span6">
-          <div class="social-media">
-            <p>
-              You can follow us on the following social networks 
-            </p>
-            <ul>
-              <li id="twitter"><%= link_to '', 'http://twitter.com/'%> </li>
-              <li id="facebook"><%= link_to '', 'http://www.facebook.com/Glasbox' %></li>
-            </ul>
-            
-            
-          </div>
-        </div>
-
-      <div class="span12 main_content">
-        
-              
-        <%= yield %>
-        <%#= render '' %>
+    <div class="row-fluid">
+      <div class="span6">
       </div>
-    </div>
-  </div>
+
+      <div class="span6">
+        <div class="social-media">
+          <p>
+            You can follow us on the following social networks 
+          </p>
+          
+          <ul>
+            <li id="twitter"><%= link_to '', 'http://twitter.com/'%> </li>
+            <li id="facebook"><%= link_to '', 'http://www.facebook.com/Glasbox' %></li>
+          
+          </ul>
+        </div>
+      </div><!-- end span6 -->
+    </div> <!-- end row-fluid -->
+
+    <div class="row-fluid">
+      <div class="span12 main_content">
+        <%= yield %>
+      </div><!-- end main_content -->
+    </div> <!-- end row-fluid -->
+
+    <div class="row-fluid">
+      <div class="span12">
+        <footer>
+
+        </footer>
+      </div>
+    </div> <!-- end row -->
+  </div><!-- end container -->
 </body>
 </html>

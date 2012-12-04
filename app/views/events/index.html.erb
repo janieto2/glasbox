@@ -1,5 +1,36 @@
-<% @events.each do |event| %>
-  <h4 class="title_index_event"> <%= event.title %> </h4>
-  <%= link_to image_tag(event.main_image(:small)), event, :class => "image_tag_css" %>
-  <p class="description_index_event"><%= event.description %></p>
-<% end %>
+<section class="events">
+	<% @last_event = @events.last %>
+	<% @events.each do |event| %>
+	  <div class="event <% if event == @last_event %> last <% end %> clearfix">
+		  <h4 class="title_index_event"> <%= link_to event.title, event %> </h4>
+		  <div class="datetime">
+			  <p class="date"> 
+			  	<i class="icon icon-calendar"> </i> 
+			  	<%= event.date_time.strftime("%A, %B %d, %Y") %>
+			  </p>
+
+			  <p class="time"> 
+			  	<i class="icon icon-time"> </i> 
+			  	<%= event.date_time.strftime("%I:%M%p") %>
+			  </p>
+		  </div>
+
+		  <div class="location">
+		  	<i class="icon icon-map-marker"> </i>
+		  	<%= event.location %>
+		  </div>
+
+		  <% if event.main_image.file? %>
+		  	<div class="event_image">
+			  <%= link_to image_tag(event.main_image(:small)), event, :class => "image_tag_css" %>
+			 </div>
+		  <% end %>
+		  <p class="description_index_event">
+		  	<i class="icon icon-align-left"> </i>
+		  	<%= truncate(event.description, :length => 500, :seperator => "") %>
+		  </p>
+
+		  <%= link_to "Learn More", event, :class => "btn btn-primary" %>
+		</div> <!-- end event -->
+	<% end %>
+</section>

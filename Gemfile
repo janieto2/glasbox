@@ -29,6 +29,7 @@ gem 'paperclip', "~> 3.0"
 gem 'redcarpet'
 gem 'aws-sdk'
 gem 'aws-s3'
+gem "combined_time_select", "~> 0.0.1"
 
 
 # To use ActiveModel has_secure_password

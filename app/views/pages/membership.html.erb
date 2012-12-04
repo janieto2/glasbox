@@ -1,0 +1,81 @@
+<section class="membership">
+	<div class="row-fluid">
+		<div class="span8 membership_content">
+			<div id="membership_table"> 
+				<div id="membership_details" class="table"> 
+					<p>Events</p>
+					<p>Glasbox Events</p>
+					<p>Access to Seminars, Symposia, Workshops & Price </p>
+					<p>Wi-fi</p>
+					<p>At-large Work Space @ PSI</p>
+					<p>Coffee, Drinks, & Snacks</p>
+					<p>Access to Glasbox Common Areas (including gym, kitchen, meeting rooms, etc.) </p>
+				</div><!-- end membership_details -->
+
+				<div id="guest_member" class="table">
+
+					<div class="plan_label"> Guest Member </div> 
+					<div class="plan_cost"> 
+						<span style="padding-left: 6px;" id="cost"> $0 </br> </span> 
+						<span id="per_month"> Per Month </span>
+					 </div>
+					 <div class="plan_details" style="padding-bottom: 20px;"> 
+					 	<p>Free + 1 guest </p>
+					 	<p>Door Fee</p>
+					 	<p class="detail_3">Yes, full price</p>
+					 	<p>No</p>
+					 	<p class="detail_5">No</p>
+					 	<p class="detail_6">No</p>
+					 	<p>With Member As a guest</p>
+					 </div>  
+				</div><!--  end guest_member -->
+
+				<div id="friend_member" class="table"> 
+					<div class="plan_label"> Friend Member </div>
+					<div class="plan_cost"> 
+						<span id="cost"> $30 </span> 
+						<span id="per_month"> Per Month </span>
+					</div> 
+					<div class="plan_details"> 
+						<p>Free + 5 Guests </p>
+						<p>Free + 1 Guest</p>
+						<p class="detail_3">Yes, 25% Off</p>
+						<p>Yes</p>
+						<p class="detail_5">Yes</p>
+						<p class="detail_6">Yes</p>
+						<p>Yes</p>
+					</div>
+
+					<%= link_to 'Sign Up', '#', :class => "btn btn-primary btn-large" %>
+				</div><!--  end friend_member -->
+
+						
+
+				<div id="partner_member" class="table"> 
+					<div class="plan_label"> Partner Member </div> 
+					<div class="plan_cost">  
+						<span id="cost"> $95 </span> 
+						<span id="per_month"> Per Month </span>
+					</div> 
+					<div class="plan_details"> 
+						<p>Free + ∞ Guests</p>
+						<p>Free + 1 Guest</p>
+						<p class="detail_3">Yes, Free</p>
+						<p>Yes</p>
+						<p class="detail_5">Yes</p>
+						<p class="detail_6">Yes</p>
+						<p>Yes</p>
+					</div>
+					<%= link_to 'Sign Up', '#', :class => "btn btn-primary btn-large" %>
+				</div><!--  end partner_member -->						
+
+			</div> <!-- end membership_table -->
+		</div> <!-- end membership_content -->
+
+		<div class="span1"></div>
+
+		<div class="span3 sidebar">
+			<%= render "/layouts/sidebar" %>
+		</div><!-- end sidebar -->
+	</div><!-- end row -->
+</section>
