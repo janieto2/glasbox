@@ -21,7 +21,7 @@ html {
 }
 
 body {
-background: url(image_path('mbg.png'));
+	background: url(<%= asset_path ('mbg.png') %>);
 }
 
 img {
@@ -179,9 +179,11 @@ p{
 		background-position: 0 0 !important;
 	}
 
-	#twitter a{background: url(image_path('smicons-twitter.png'));}
-
-	#facebook a{background:  url(image_path('smicons-facebook.png'));}
+	
+	#twitter a{
+		background: url(<%= asset_path('smicons-twitter.png') %>);
+	}
+	#facebook a{background: url( <%= asset_path('smicons-facebook.png') %>);}
 
 }
 
@@ -189,7 +191,7 @@ p{
 .mainh {
 	width:100%;
 	height:40px;
-	background: url(image_path('bg.png'));
+	background: url(<%= asset_path('bg.png') %>);
 }
 .logo{
 	float: left;
