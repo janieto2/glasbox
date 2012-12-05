@@ -1,38 +1,58 @@
 <section class="event_show">
 
-  <div class="event last clearfix">
-    <% if @event.main_image.file? %>
-      <div class="image">
-        <%= image_tag @event.main_image(:regular) %>
-        <div class="image_link">
-          <%= link_to "Download Full Image", @event.main_image.url, :target => "_blank" %>
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="event last clearfix">
+        <% if @event.main_image.file? %>
+          <div class="image">
+            <%= image_tag @event.main_image(:regular) %>
+            <div class="image_link">
+              <%= link_to "Download Full Image", @event.main_image.url, :target => "_blank" %>
+            </div>
+          </div>
+        <% end %>
+
+        <h3> <%= @event.title %></h3>
+        <div class="datetime">
+          <p class="date"> 
+            <i class="icon icon-calendar"> </i> 
+            <%= @event.date_time.strftime("%A, %B %d, %Y") %>
+          </p>
+
+          <p class="time"> 
+            <i class="icon icon-time"> </i> 
+            <%= @event.date_time.strftime("%I:%M%p") %>
+          </p>
         </div>
-      </div>
-    <% end %>
 
-    <h3> <%= @event.title %></h3>
-    <div class="datetime">
-      <p class="date"> 
-        <i class="icon icon-calendar"> </i> 
-        <%= @event.date_time.strftime("%A, %B %d, %Y") %>
-      </p>
+        <div class="location">
+          <i class="icon icon-map-marker"> </i>
+          <%= @event.location %>
+        </div>
 
-      <p class="time"> 
-        <i class="icon icon-time"> </i> 
-        <%= @event.date_time.strftime("%I:%M%p") %>
-      </p>
+        <div class="">
+          <i class="icon icon-align-left"> </i>
+          <%= markdown.render(@event.description).html_safe %>
+        </div>
+
+        <div class="fb-comments" data-href="http://glasbox.com" data-num-posts="4"></div>
+
+      </div><!-- end event -->
+    </div> <!-- end span8 -->
+
+    <div class="span1"></div>
+
+    <div class="span3">
+      <%= render 'layouts/sidebar' %>
     </div>
-
-    <div class="location">
-      <i class="icon icon-map-marker"> </i>
-      <%= @event.location %>
-    </div>
-
-    <div class="">
-      <i class="icon icon-align-left"> </i>
-      <%= markdown.render(@event.description).html_safe %>
-    </div>
-
-  </div>
 
 </section>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
