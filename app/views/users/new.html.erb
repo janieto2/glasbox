@@ -1,4 +1,9 @@
-<%- model_class = @user.class -%>
-<h1><%=t '.title', :default => t('helpers.titles.new', :model => model_class.model_name.human,
-                               :default => "New #{model_class.model_name.human}") %></h1>
-<%= render :partial => 'form' %>
+<section class="signup">
+	<div class="signup_form hero-unit">
+		<h2 class="title">Sign Up</h2>
+		<p>
+		Quisque est diam, feugiat non consequat eu, fermentum a elit. Aenean lectus ligula, euismod id vestibulum nec, facilisis ut leo. Proin elit risus, egestas nec fringilla quis, vehicula at dui.
+		</p>
+		<%= render :partial => 'form' %>
+	</div>
+</section>

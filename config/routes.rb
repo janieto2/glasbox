@@ -7,10 +7,12 @@ Glasbox::Application.routes.draw do
 
   resources :events
   resources :members
-  resources :users
   resources :user_sessions
-
-
+  
+  resources :users do
+    resource :membership
+  end
+  
   #User Flow
   match 'login' => "user_sessions#new", :as => :login
   match 'logout' => "user_sessions#destroy", :as =>:logout

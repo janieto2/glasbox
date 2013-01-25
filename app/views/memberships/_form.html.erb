@@ -1,0 +1,101 @@
+<%= form_for([@user, @membership], :url => user_membership_path, :html => {:multipart => true, :class => 'form-horizontal membership_form' }) do 
+  |f| %>
+    <% if @membership.errors.any? %>
+      <div class="alert alert-error alert-block">
+        <h4>Woah There Were Some Errors!</h4>
+        <ul>
+          <% @membership.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %> 
+    <%= f.hidden_field :email, :value => @user.email %>
+    <%= f.hidden_field :user_id, :value => @user.id %> 
+    <%= f.hidden_field :stripe_card_token, :id => "membership_stripe_card_token" %>
+
+    <div class="alert alert-error" id="stripe_error">
+      <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+    </div>
+
+      <div class="control-group">
+        <%= f.label :plan_id, "Choose your Plan", :class => 'control-label' %>
+        <div class="controls">
+          <%= f.select :plan_id, [['$60 for 6 Months', 1], ['$100 for 1 year', 2]] %>
+        </div>
+      </div>
+
+
+      <% if @membership.stripe_customer_token.present? %>
+        <div class="credit_card_prompt">
+          Credit card has been provided. <%= link_to "Change Credit Card", "#", :id => "update_credit_card" %>
+        </div>
+        <div class="credit_card_inputs">
+      <% end %>
+        <div class="control-group ">
+          <%= label_tag :name, "Name", :class => 'control-label' %>
+          <div class="controls">
+            <%= text_field_tag :name, @user.full_name, name: nil%>
+          </div>
+        </div>
+
+          <div class="control-group ">
+            <%= label_tag :address_line1, "Address", :class => 'control-label' %>
+            <div class="controls">
+              <%= text_field_tag :address_line1, nil, name: nil%>
+            </div>
+          </div>
+
+          <div class="control-group ">
+            <%= label_tag :address_zip, "Zip Code", :class => 'control-label' %>
+            <div class="controls">
+              <%= text_field_tag :address_zip, nil, name: nil%>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= label_tag :card_number, "Credit Card Number", :class => 'control-label' %>
+            <div class="controls">
+              <%= text_field_tag :card_number, nil, name: nil, :id=>"card_number" %>
+              <div class="cards">
+                <%= image_tag "Visa.png" %>
+                <%= image_tag "MasterCard.png" %>
+                <%= image_tag "American Express.png" %>
+                <%= image_tag "Discover.png" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="control-group ">
+            <%= label_tag :card_code, "Security Code on Card (CVV)", :class => 'control-label' %>
+            <div class="controls">
+              <%= text_field_tag :card_code, nil, name: nil, :id => "card_code" %>
+              <div class="card_back">
+                <%= image_tag 'back_card.png' %>
+              </div>
+            </div>
+          </div>
+          <div class="control-group">
+            <%= label_tag :card_month, "Card Expiration", :class => 'control-label' %>
+            <div class="controls">
+              <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
+              <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
+            </div>
+          </div>
+        <% if @membership.stripe_customer_token.present? %>
+          </div><!-- end credit_card_inputs -->
+        <% end %>
+
+
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary btn-large', :disable_with => "Loading..." %>
+  </div>
+<% end %>
+
+<script>
+  $('#update_credit_card').click(function(){
+    $('.credit_card_prompt').fadeOut('fast');
+    $('.credit_card_inputs').slideDown('slow');
+  });
+</script>
