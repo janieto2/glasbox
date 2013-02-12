@@ -87,9 +87,11 @@
 		  <div class="carousel-inner">
 		  	<% first_member = @members.first %>
 		  	<% @members.each do |member| %>
-			  	<div class="<% if member == first_member %> active <% end %> item">
+			  	
+			  	<div class="<% if member == first_member %> active <% end %> item img_holder">
 			  		<%= image_tag(member.main_image(:regular))  %>			  	
-			  	</div>
+			  	
+			  </div> <!-- /IMG_HOLDER -->	
 			 <% end %>
 		  </div>
 		  <!-- Carousel nav -->
